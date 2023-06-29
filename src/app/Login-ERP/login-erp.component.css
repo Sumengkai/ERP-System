@@ -1,0 +1,11 @@
+.login-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.login-area input {
+  width: 40%;
+  margin: 20px 0;
+}/*# sourceMappingURL=login-erp.component.css.map */

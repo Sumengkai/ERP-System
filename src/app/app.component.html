@@ -1,2 +1,233 @@
-<BodyPage />
-<router-outlet></router-outlet>
+<div class="BodyPage">
+    <div class="bodyPage-area">
+        <app-header-erp />
+        <div class="output-area">
+            <div class="left">
+                <div class="left-area">
+                    <!-- 這裡塞東西 可以撐高度 -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            進貨管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="PurchaseCreate">PurchaseCreate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="PurchaseUpdate">PurchaseUpdate
+                                    </a>
+                                </div>
+                                <div>
+                                    <a routerLink="PurchaseSearch">PurchaseSearch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 大項目按鈕 -->
+                    <!-- ------------------------ -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            銷售管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="ShippingCreate">ShippingCreate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="ShippingUpdate">ShippingUpdate
+                                    </a>
+                                </div>
+                                <div>
+                                    <a routerLink="ShippingSearch">ShippingSearch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 大項目按鈕 -->
+                    <!-- ------------------------ -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            庫存管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="StockCreate">StockCreate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="StockUpdate">StockUpdate
+                                    </a>
+                                </div>
+                                <div>
+                                    <a routerLink="StockSearch">StockSearch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------ -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            客戶管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="EmployeeCreate">EmployeeCreate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="EmployeeUpdate">EmployeeUpdate
+                                    </a>
+                                </div>
+                                <div>
+                                    <a routerLink="EmployeeSearch">EmployeeSearch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------ -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            廠商管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="SupplierCreate">SupplierCreate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="SupplierUpdate">SupplierUpdate
+                                    </a>
+                                </div>
+                                <div>
+                                    <a routerLink="SupplierSearch">SupplierSearch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------ -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            維修管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="RepairCreate">RepairCreate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="RepairUpdate">RepairUpdate
+                                    </a>
+                                </div>
+                                <div>
+                                    <a routerLink="RepairSearch">RepairSearch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------------ -->
+                    <!-- 大項目按鈕 -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary bodyPage-btn">
+                            發票管理
+                        </button>
+                        <button type="button"
+                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split bodyPage-btn"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu select">
+                            <div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="InvoiceUpdate">InvoiceUpdate
+                                    </a>
+                                </div>
+                                <!-- 選項 -->
+                                <div>
+                                    <a routerLink="InvoiceSearch">InvoiceSearch
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <!-- <div class="right-area" *ngIf="LoginService.LoginBol==false">
+                    <app-login-erp />
+                </div> -->
+                <!-- <div class="right-area" *ngIf="LoginService.LoginBol"> -->
+                <!-- 這裡塞路由的code 可以撐高度 -->
+                <!-- <router-outlet></router-outlet> -->
+                <!-- </div> -->
+                <div class="right-area">
+                    <!-- 這裡塞路由的code 可以撐高度 -->
+                    <router-outlet></router-outlet>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>

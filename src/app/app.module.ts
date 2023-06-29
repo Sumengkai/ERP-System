@@ -3,17 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyPage } from 'src/Component/BodyPage';
-import { Header } from 'src/Component/Header';
-import { Login } from 'src/Component/Login';
+
 import { HttpClientModule } from '@angular/common/http';
+// ---自己的
+import { PurchaseSearch } from './Purchase-Search/PurchaseSearch.component';
+import { PurchaseCreate } from './Purchase-Create/PurchaseCreate.component';
+import { HeaderERPComponent } from './Header-ERP/header-erp.component';
+import { LoginERPComponent } from './Login-ERP/login-erp.component';
+// ---
+import { FormsModule } from '@angular/forms'; 
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   declarations: [
-    AppComponent,BodyPage,Header,Login
+    AppComponent, HeaderERPComponent, LoginERPComponent,PurchaseSearch,PurchaseCreate
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

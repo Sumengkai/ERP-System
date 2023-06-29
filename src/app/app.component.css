@@ -1,1 +1,65 @@
-/*# sourceMappingURL=app.component.css.map */
+@charset "UTF-8";
+.select {
+  display: none;
+}
+
+.show .select {
+  /* 當選單被顯示時再將其顯示出來 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BodyPage {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: gray; */
+}
+
+.bodyPage-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.output-area {
+  width: 100%;
+  display: flex;
+}
+
+.right {
+  width: 80%;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.right-area {
+  width: 100%;
+  background-color: wheat;
+}
+
+.left {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: wheat;
+}
+
+.left-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyPage-btn {
+  margin: 20px auto;
+}/*# sourceMappingURL=app.component.css.map */
