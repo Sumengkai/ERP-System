@@ -27,7 +27,10 @@
                     <p>產品分類</p>
                 </div>
                 <div class="Page-area-child-area-1">
-                    <input type="text">
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">1</option>
+                    </select>
                 </div>
             </div>
             <div class="Page-area-child-area">
@@ -39,25 +42,7 @@
                 </div>
             </div>
         </div>
-        <!-- 一橫 -->
-        <div class="Page-area-child-area-col">
-            <div class="Page-area-child-area">
-                <div class="Page-area-child-area-1">
-                    <p>req</p>
-                </div>
-                <div class="Page-area-child-area-1">
-                    <input type="text">
-                </div>
-            </div>
-            <div class="Page-area-child-area">
-                <div class="Page-area-child-area-1">
-                    <p>req</p>
-                </div>
-                <div class="Page-area-child-area-1">
-                    <input type="text">
-                </div>
-            </div>
-        </div>
+
         <!-- 一橫 -->
         <!-- 中間的標頭 -->
         <div class="Page-area-child-area-col">
@@ -83,7 +68,9 @@
             </div>
             <div class="Page-area-child-area-2 Page-area-child-area-2-5">
                 <div class="Page-area-child-area-2-6-btn">
-                    <button type="button" class="btn btn-success" (click)="addPurchase()">+</button>
+                    <button type="button" class="btn btn-success" (click)="addPurchase()"
+                        *ngIf="btnBol==false">+</button>
+                    <button type="button" class="btn btn-dark" (click)="updatePurchase()" *ngIf="btnBol">確認</button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <div class="Page-area">
-    <h2>員工新增</h2>
-    <div class="form-body">
+    <h2>員工修改 </h2>
+    <div class="form-body update-form-body">
         <div class="formBody-area1">
             <div class="formBody-area1-input">
                 <div class="input-group mb-3">
@@ -15,11 +15,9 @@
             <div class="formBody-area1-input">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Department</span>
-                    <!-- <input type="text" class="form-control" placeholder="Department" aria-label="Username"
-                        aria-describedby="basic-addon1" [(ngModel)]="department"> -->
                     <select name="" id="" [(ngModel)]="department">
                         <option value=""></option>
-                        <option value="" *ngFor="let item of departmentList" value="{{item}}">{{item}}</option>
+                        <option *ngFor="let item of departmentList" value="{{item}}">{{item}}</option>
                     </select>
                 </div>
             </div>
@@ -39,12 +37,10 @@
             <div class="formBody-area1-input">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Authority</span>
-                    <!-- <input type="text" class="form-control" placeholder="Authority" aria-label="Username"
-                        aria-describedby="basic-addon1" [(ngModel)]="authority"> -->
+
                     <select name="" id="" [(ngModel)]="authority">
                         <option value=""></option>
                         <option value="" *ngFor="let item of authorityList" value="{{item}}">{{item}}</option>
-
                     </select>
                 </div>
             </div>
@@ -62,15 +58,19 @@
                 </div>
             </div>
         </div>
+
         <!-- 按鈕區塊 -->
         <div class="formBody-area2">
             <div class="formBody-area2-button">
+                <button type="button" class="btn btn-danger"
+                    (click)="cancelUpdateEmployeeInfoFunction(false)">取消</button>
             </div>
             <div class="formBody-area2-button">
                 <button type="button" class="btn btn-success"
-                    (click)="createEmployeeApi(pkID,department,name,authority,pwd)">送出</button>
+                    (click)="EmployeeService.updateEmployeeApi(pkID,department,name,authority,pwd)">送出</button>
             </div>
         </div>
+
     </div>
 
 

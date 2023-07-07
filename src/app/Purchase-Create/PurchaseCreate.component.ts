@@ -20,7 +20,7 @@ export class PurchaseCreate implements AfterViewInit{
     req2 ="";
     req3 ="";
     req4 ="";
-    text ="test";
+    btnBol = false;
     inputArray: string[] = [];
     purchaseList: PurchaseFace2[] = []; 
     // ==================================================================
@@ -35,15 +35,15 @@ export class PurchaseCreate implements AfterViewInit{
       purchaseUpdateBtn.forEach((btn: HTMLElement) => {
         console.log(btn);
         this.renderer.listen(btn, 'click', (event: Event) => {
-          const numUuid = btn.id.split('_')[1];
+          let numUuid = +btn.id.split('_')[1];
           console.log(numUuid);
-          console.log("!!!");
+          this.searchOnlyPurchase(numUuid);
         });
       });
       } 
       // ---
         // 自訂
-          // 1.新增
+          // 1.暫存新增
       addPurchase() {
         // 按(+)後，將input的值裝入List，並清空input標籤
         // -----隨機Id，用於藏值用
@@ -53,7 +53,7 @@ export class PurchaseCreate implements AfterViewInit{
         console.log(randomInRange+"隨機");
         // -----
         const reqList: PurchaseFace2[] = [
-          {randomId:randomInRange,req1:this.req1,req2:this.req2,req3:this.req3},
+          {randomId:randomInRange,req1:this.req1,req2:this.req2,req3:this.req3,req4:this.req4},
          ];
         this.inputPurchases.forEach((input: ElementRef) => {
           input.nativeElement.value = '';
@@ -110,14 +110,32 @@ export class PurchaseCreate implements AfterViewInit{
 
       `);
     }
-    handleButtonClick(event: any, randomId: number, buttonType: string) {
-      console.log(randomId);
-      if (buttonType === 'update') {
-        // 处理修改按钮点击事件
-        console.log('修改按钮点击，randomId:', randomId);
-      } else if (buttonType === 'delete') {
-        // 处理删除按钮点击事件
-        console.log('删除按钮点击，randomId:', randomId);
-      }
+          // 2.更新前，將資料帶進input
+        searchOnlyPurchase(randomInRange:Number) {
+            // 按(+)後，將input的值裝入List，並清空input標籤
+            // -----隨機Id，用於藏值用
+            console.log(randomInRange+"隨機");
+            let purchaseList =  this.purchaseList;
+            let purchaseItem: PurchaseFace2 | undefined; // 聲明 purchaseItem 的類型
+            for(let item of purchaseList){
+             if(item.randomId ==randomInRange){
+                purchaseItem =item
+             }     
+            }
+            console.log(purchaseItem?.req1);
+            if (purchaseItem) {
+              this.req1 = purchaseItem.req1;
+              this.req2 = purchaseItem.req2;
+              this.req3 = purchaseItem.req3;
+              this.req4 = purchaseItem.req4;
+            }
+            this.btnBol =true; 
+            }
+          // 3.暫存修改
+         updatePurchase() {
+              console.log("修改");
+              this.btnBol =false; 
+    
+
     }
 }

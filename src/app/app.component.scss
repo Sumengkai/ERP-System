@@ -13,7 +13,11 @@
 .BodyPage {
   width: 100vw;
   height: 100vh;
-  /* background-color: gray; */
+  // background-color: gold;
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210101/pngtree-watercolor-simple-clean-background-image_525989.jpg");
+  background-size: cover; /* 图片等比例缩放以填充容器 */
+  background-position: center; /* 图片在容器中居中显示 */
+  background-repeat: no-repeat; /* 防止图片重复显示 */
 }
 
 .bodyPage-area {
@@ -27,29 +31,37 @@
 .output-area {
   width: 100%;
   display: flex;
+
+  .login-area-right {
+    width: 100%;
+  }
 }
 
 .right {
   width: 80%;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
+  // background-color: antiquewhite;
   display: flex;
   justify-content: center;
+  background-image: url("https://st4.depositphotos.com/13264288/22942/v/600/depositphotos_229424916-stock-illustration-erp-enterprise-resource-planning-productivity.jpg");
+  background-size: cover; /* 图片等比例缩放以填充容器 */
+  background-position: center; /* 图片在容器中居中显示 */
+  background-repeat: no-repeat; /* 防止图片重复显示 */
 }
 
 .right-area {
   width: 100%;
-  background-color: wheat;
 }
-
+.login-area {
+}
 .left {
   width: 20%;
   display: flex;
   justify-content: center;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  background-color: wheat;
+  // border-left: 2px solid black;
+  // border-right: 2px solid black;
+  // border-bottom: 2px solid black;
+  // background-color: wheat;
+  // height: 100%;
 }
 
 .left-area {
@@ -57,8 +69,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // border-right: 2px solid black;
+  // background-color: aqua;
+  width: 100%;
+  // height: 100%;
 }
 
+.left-area2 {
+  height: 100vh;
+  width: 100%;
+  // border-right: 2px solid black;
+}
 .bodyPage-btn {
   margin: 20px auto;
 }

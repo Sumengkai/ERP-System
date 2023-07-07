@@ -7,5 +7,11 @@ import { LoginService } from '../login.service';
 })
 export class LoginERPComponent {
   constructor(public LoginService: LoginService) {}
+  account ="";
+  pwd ="";
+
+
+
+
 
 }

@@ -1,11 +1,13 @@
 <div class="header">
-    <div class="header-left-area">
-
+    <div class="header-img-area">
+        <button>
+            <a routerLink="/">
+                <img src="https://t.pimg.jp/068/989/760/5/68989760.jpg" alt="">
+            </a>
+        </button>
     </div>
-    <div class="header-h1-area">
-        <h1>
-            <a routerLink="/"> ERP-System </a>
-        </h1>
+    <div class="logOut-area">
+        <button type="button" class="btn btn-info" (click)="LoginService.LoginOut()"
+            *ngIf="LoginService.LoginBol">登出</button>
     </div>
-
 </div>

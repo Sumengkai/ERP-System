@@ -1,0 +1,35 @@
+// Employee排版 - 新增/修改 (共用)
+.Page-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  .form-body {
+    background-color: gray; /* 设置表单容器的背景色 */
+    padding: 20px; /* 添加内边距，使表单内容与容器边缘保持距离 */
+    border-radius: 5px; /* 添加圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 auto;
+    width: 60%;
+
+    .formBody-area1 {
+      width: 100%;
+      .formBody-area1-input {
+        input {
+        }
+      }
+    }
+    .formBody-area2 {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+// -----

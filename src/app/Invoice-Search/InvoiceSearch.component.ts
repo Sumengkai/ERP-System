@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'InvoiceSearch',
-  templateUrl: './InvoiceSearch.html',
+  templateUrl: './InvoiceSearch.component.html',
   styleUrls: ['../../styles.css'],
 
 })

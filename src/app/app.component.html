@@ -2,8 +2,8 @@
     <div class="bodyPage-area">
         <app-header-erp />
         <div class="output-area">
-            <div class="left">
-                <div class="left-area">
+            <div class="left" *ngIf="LoginService.LoginBol">
+                <div class="left-area" *ngIf="LoginService.LoginBol">
                     <!-- 這裡塞東西 可以撐高度 -->
                     <!-- 大項目按鈕 -->
                     <div class="btn-group dropright">
@@ -100,7 +100,7 @@
                     <!-- 大項目按鈕 -->
                     <div class="btn-group dropright">
                         <button type="button" class="btn btn-secondary bodyPage-btn">
-                            客戶管理
+                            員工資訊
                         </button>
                         <button type="button"
                             class="btn btn-secondary dropdown-toggle dropdown-toggle-split  bodyPage-btn"
@@ -114,11 +114,7 @@
                                     <a routerLink="EmployeeCreate">EmployeeCreate
                                     </a>
                                 </div>
-                                <!-- 選項 -->
-                                <div>
-                                    <a routerLink="EmployeeUpdate">EmployeeUpdate
-                                    </a>
-                                </div>
+
                                 <div>
                                     <a routerLink="EmployeeSearch">EmployeeSearch
                                     </a>
@@ -214,20 +210,26 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="right">
-                <!-- <div class="right-area" *ngIf="LoginService.LoginBol==false">
-                    <app-login-erp />
+                <!-- <div class="left-area2" *ngIf="LoginService.LoginBol==false">
+
+
+
+
+
+
+
+
                 </div> -->
-                <!-- <div class="right-area" *ngIf="LoginService.LoginBol"> -->
-                <!-- 這裡塞路由的code 可以撐高度 -->
-                <!-- <router-outlet></router-outlet> -->
-                <!-- </div> -->
+            </div>
+            <div class="login-area-right" *ngIf="LoginService.LoginBol==false">
+                <app-login-erp />
+            </div>
+            <div class="right" *ngIf="LoginService.LoginBol">
                 <div class="right-area">
-                    <!-- 這裡塞路由的code 可以撐高度 -->
                     <router-outlet></router-outlet>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
+        <app-footer-erp *ngIf="LoginService.LoginBol" />
     </div>
+</div>
